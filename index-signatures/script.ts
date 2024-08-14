@@ -1,5 +1,10 @@
-type GroceryList = unknown;
+type GroceryList = { [item: string]: number };
 
-type InappropriateActionBySituation = unknown;
+type InappropriateAction = string[];
+type InappropriateActionBySituation = {
+  [situation: string]: InappropriateAction;
+};
 
-type CharactersById = unknown;
+type Character = { id: number; name: string; status: string; species: string };
+// Requires the key characterId to be a number. TypeScript will still convert characterId to a string because it is an object key.
+type CharactersById = { [characterId: number]: Character };
