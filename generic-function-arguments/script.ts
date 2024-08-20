@@ -1,3 +1,3 @@
-const identity = undefined;
+const identity = <T>(argument: T) => argument;
 
-const mapArray = (arr, fn) => arr.map(fn);
+const mapArray = <T, U>(arr: T[], fn: (value: T) => U) => arr.map(fn);
